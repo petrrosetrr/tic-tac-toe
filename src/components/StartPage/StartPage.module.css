@@ -1,0 +1,110 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.StartPage {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem;
+    margin-top: 9rem;
+
+}
+
+.fieldSize {
+    margin-top: 15rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    ::selection {
+    color: var(--color-bg);
+    background-color: var(--color-text);
+}
+
+.fieldSize input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 2.2rem;
+    width: 5.2rem;
+    height: 3.1rem;
+    text-align: center;
+    margin-top: 1.4rem;
+    color: inherit;
+    overflow: hidden;
+}
+
+.title {
+    color: white;
+    position: relative;
+    font-size: 9rem;
+    text-shadow: 0 0 3.5rem rgba(255, 255, 255, 0.15);
+    animation: text-shadow 2s infinite alternate ease-in-out;
+}
+
+.title::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 50%;
+    top: 130%;
+    left: 0;
+    transform: perspective(2rem) rotateX(25deg) scale(0.85);
+    background: linear-gradient(to bottom, white, transparent);
+    opacity: 0.2;
+    filter: blur(30px);
+    animation: pseudo-shadow 2s infinite alternate ease-in-out;
+}
+
+@keyframes text-shadow {
+    from {
+        text-shadow: 0 0 3.5rem rgba(255, 255, 255, 0.15);
+    }
+    to {
+        text-shadow: 0 0 4.7rem rgba(255, 255, 255, 0.35);
+    }
+}
+
+@keyframes pseudo-shadow {
+    from {
+        opacity: 0.2;
+        filter: blur(30px);
+    }
+    to {
+        opacity: 0.3;
+        filter: blur(35px);
+    }
+}
+
+.startBtn {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 15rem;
+    height: 4rem;
+    margin-top: 3rem;
+    font-weight: 500;
+    color: var(--color-bg);
+    border-radius: 2.2rem;
+    background-color: var(--color-text);
+    box-shadow: 0 0 1.1rem rgba(255, 255, 255, 0.15);
+    transition-duration: 0.2s;
+}
+
+.startBtn:hover, .startBtn:focus, .startBtn:active {
+    box-shadow: 0 0 1.6rem rgba(255, 255, 255, 0.15);
+}
+
