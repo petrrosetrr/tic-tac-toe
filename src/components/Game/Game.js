@@ -187,7 +187,7 @@ const Game = () => {
         };
 
         p5.preload = () => {
-            fontBold = p5.loadFont('/RalewayBold.ttf');
+            fontBold = p5.loadFont('Raleway-Bold.ttf');
         };
 
         p5.setup = () => {
