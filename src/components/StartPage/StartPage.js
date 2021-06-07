@@ -24,7 +24,10 @@ const StartPage = () => {
             </label>
             <Link
                 className={s.startBtn}
-                to='game'
+                to={{
+                    pathname: 'game',
+                    hash: `${value}`,
+                }}
                 onClick={()=> {
                     if (value >= 3 && value <= 12)
                         setFieldSize(value);
