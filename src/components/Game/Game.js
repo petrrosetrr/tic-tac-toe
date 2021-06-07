@@ -9,7 +9,6 @@ const Game = () => {
 
     const sketch = (p5) => {
         let fontBold;
-        let context;
         let cellSize;
         let fieldWidth;
         let fieldLeftTop = new Array(2);
@@ -168,8 +167,9 @@ const Game = () => {
 
             tmp = [];
             map.forEach((line, i) => {
-                tmp.push(line[map.length - i]);
+                tmp.push(line[map.length - 1 - i]);
             });
+            console.log(tmp);
             winner = checkLine(tmp);
             if (winner)
                 return winner;
@@ -192,7 +192,6 @@ const Game = () => {
 
         p5.setup = () => {
             p5.createCanvas(p5.windowWidth, p5.windowHeight);
-            context = p5.drawingContext;
             initMap();
         };
 
